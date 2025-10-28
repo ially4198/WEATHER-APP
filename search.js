@@ -1,5 +1,7 @@
 
 const apiKey = "cf78efa90dbdae6a9d4d0353e6d9380e";
+const apiKey2 ="fb108742e12be8aa0a3970154c92e34b";
+const apiKey3 = "67f8f146b29c017ce0f649b51a6e3fa3";
 const content = document.querySelector(".content");
 const cityInput = document.querySelector(".city-input");
 const noReferrer =  document.querySelector(".emptySearch");
@@ -24,7 +26,9 @@ cityInput.addEventListener("keypress", event => {
       noReferrer.style.display = "block";
     }
 
-    fetch(`https://nominatim.openstreetmap.org/search?q=${cityName}&format=jsonv2`)
+    // fetch(`https://nominatim.openstreetmap.org/search?q=${cityName}&format=jsonv2`)
+    fetch(`https://api.positionstack.com/v1/forward?access_key=${apiKey2}&query=${cityName}`)
+    // fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey3}`)
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch coordinates");
         return response.json();
@@ -32,8 +36,8 @@ cityInput.addEventListener("keypress", event => {
       .then((data) => {
         if (data.length === 0) throw new Error("City not found");
 
-        const lat = data[0].lat;
-        const lon = data[0].lon;
+        const lat = data.data[0].latitude;
+        const lon = data.data[0].longitude;
         console.log(`Coordinates for ${cityName}:`, lat, lon);
 
         // ✅ Return the next fetch (CHAINED)

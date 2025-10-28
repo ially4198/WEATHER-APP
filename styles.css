@@ -309,3 +309,41 @@ background-color: rgb(10, 7, 181);
         font-weight: 300;
     }
 }
+@media(max-width:600px){
+    .content{
+        width: 300px;
+    }
+    .today-forecast{
+        width: 100px;
+    }
+    .other-days{
+        width: 190px;
+    }
+    .foot-nav{
+        width: 344px;
+    }
+    .foot-nav i{
+       margin: 20px 40px; 
+    }
+    .city-input{
+        width: 200px;
+    }
+    .temp{
+        width: 90%;
+        gap: 50px
+       
+    }
+    .search-weather-icon{
+        font-size: 70px;
+    }
+    .wph{
+        width: 80%;
+    }
+    .sun{
+        width: 60%;
+    }
+    .pressure p, .wind p, .humidity p, .sunrise p, .sunset p{
+        font-size: 12px;
+        font-weight: 300;
+    }
+}
