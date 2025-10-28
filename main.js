@@ -39,7 +39,7 @@ function success(position) {
           todayForecast.innerHTML = `<p class="today-forecast-title" >TODAY</p>
           <img src="https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png" ">
           <p class="temp-value-today">${Math.round(data.list[0].main.temp)}<sup>o</sup>C</p>
-          <p>${data.list[0].weather[0].description}</p>
+          <p class = "desc-today">${data.list[0].weather[0].description}</p>
         `;
 
       // Example: Log one forecast per day

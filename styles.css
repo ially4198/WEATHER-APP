@@ -39,7 +39,9 @@
     border-radius: 10px;
 
 }
-
+.desc-today{
+    font-size: 9px;
+}
 .other-days {
     color: white;
     text-align: center;
@@ -59,15 +61,10 @@
     margin-bottom: 10px;
 }
 
-
-
 .days-forecast-container {
     display: flex;
     overflow-x: auto;
     width: 100%;
-    scrollbar-width: none;
-
-
 }
 
 .day-forecast {
@@ -91,7 +88,6 @@
 
 .day-forecast:last-child {
     margin-right: 20px;
-
 }
 
 .day-forecast p {
@@ -312,6 +308,10 @@ background-color: rgb(10, 7, 181);
         font-size: 12px;
         font-weight: 300;
     }
+    
+.days-forecast-container {
+    scrollbar-width: none;
+}
 }
 @media(max-width:600px){
     .content{
