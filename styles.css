@@ -65,6 +65,8 @@
     display: flex;
     overflow-x: auto;
     width: 100%;
+    scrollbar-width: none;
+
 
 }
 
@@ -154,7 +156,9 @@
     font-size: 100px;
     font-weight: 900;
 }
-
+.weather-description{
+    text-align: justify;
+}
 
 .foot-nav {
     color: turquoise;
@@ -346,4 +350,12 @@ background-color: rgb(10, 7, 181);
         font-size: 12px;
         font-weight: 300;
     }
+    .temp-value {
+    font-size: 80px;
+    font-weight: 900;
+}
+.weather-description{
+    font-size: 11px;
+    text-align: justify;
+}
 }
